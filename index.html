@@ -36,5 +36,22 @@
                 </div>
             </div>
         </div>
+
+        <script>
+
+            const apiKey = "d00a08067ca5e779e69df7b17b8b7d03";
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=orlando";
+
+            async function checkWeather(){
+                const response = await fetch(apiUrl + `&appid=${apiKey}`);
+                var data = await response.json();
+
+                console.log(data);
+            }
+
+            checkWeather();
+
+        </script>
+
     </body>
 </html>
